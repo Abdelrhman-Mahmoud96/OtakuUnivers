@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dell.otakuunivers">
+
+    <!-- permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.Categories"
+            android:label="Categories" />
+
+        <activity
+            android:name=".Activities.AnimeActivity"
+            android:label="Anime"
+            android:parentActivityName=".Activities.Categories">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/search_configration"/>
+        </activity>
+
+        <activity
+            android:name=".Activities.MangaActivity"
+            android:label="Manga"
+            android:parentActivityName=".Activities.Categories">
+        <intent-filter>
+            <action android:name="android.intent.action.SEARCH" />
+        </intent-filter>
+        <meta-data android:name="android.app.searchable"
+            android:resource="@xml/search_configration"/>
+        </activity>
+
+        <activity
+            android:name=".Activities.CharacterActivity"
+            android:label="Characters"
+            android:parentActivityName=".Activities.Categories">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/search_configration"/>
+        </activity>
+
+        <activity android:name=".Activities.Details" />
+
+        <activity
+            android:name=".Activities.StaffActivity"
+            android:label="Staff" />
+        <activity android:name=".Activities.StaffDetailsActivity" />
+
+        <activity
+            android:name=".Activities.EpisodesActivity"
+            android:label="Episodes"
+            android:parentActivityName=".Activities.Details" />
+        <activity android:name=".Activities.EpisodesDetailsActivity" />
+
+    </application>
+
+</manifest>

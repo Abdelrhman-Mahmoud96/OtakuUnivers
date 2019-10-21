@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Details"
+    android:background="@color/colorPrimaryDark">
+
+    <ImageView
+        android:id="@+id/detailsCover"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@drawable/detailesplaceholder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsCover">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Genres"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/detailsGenre"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary"
+                       android:padding="7dp"
+                        android:background="@drawable/borders"
+                        android:scrollbars="vertical"/>
+
+                </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/detailsStartLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="Start Date :"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailsStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/detailsStartLabel"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="test"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/detailsEndLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="130dp"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:gravity="center_horizontal"
+                    android:text="End Date :"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailsEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="-130dp"
+                    android:layout_toEndOf="@+id/detailsEndLabel"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="test"
+                    android:textColor="@color/colorPrimary">
+
+
+                </TextView>
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailsRatingLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Avg. Rating :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/detailsRatingLabel"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/detailsPopLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="136dp"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:gravity="center_horizontal"
+                        android:text="Ranking :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsPopularity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="-136dp"
+                        android:layout_toEndOf="@+id/detailsPopLabel"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailsageLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Age Rating :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsAgeRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/detailsageLabel"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/detailsGuideLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="117dp"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:gravity="center_horizontal"
+                        android:text="Rate Guide :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsAgeGuide"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="-117dp"
+                        android:layout_toEndOf="@+id/detailsGuideLabel"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary">
+
+                    </TextView>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/detailsStatusLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Status :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/detailsStatusLabel"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary" />
+
+                    <TextView
+                        android:id="@+id/detailsEpisodsNoLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="102dp"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:gravity="center_horizontal"
+                        android:text="No. Episodes :"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsEpisodsNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="-102dp"
+                        android:layout_toEndOf="@+id/detailsEpisodsNoLabel"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="test"
+                        android:textColor="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="65dp"
+                    android:layout_margin="5dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="Story :"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/detailsDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:scrollbars="vertical"
+                    android:text="TextView"
+                    android:padding = "5dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/borders"
+                     />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Production"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailsProduction"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Loading..."
+                        android:padding="7dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/borders"
+                        android:scrollbars="vertical"
+                       />
+
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/detaileStaff"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/button_stream_edit"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="Staff"
+                    android:textColor="@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <Button
+                        android:id="@+id/detaileCharacters"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_edit"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Characters"
+                        android:textColor="@color/colorAccent"
+                        android:layout_margin="5dp"
+                        android:textSize="12sp"
+
+                        />
+
+                    <Button
+                        android:id="@+id/detaileEpisodes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_edit"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Episodes"
+                        android:textColor="@color/colorAccent"
+                        android:layout_margin="5dp" />
+
+                    <Button
+                        android:id="@+id/detaileTrailer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_edit"
+                        android:fontFamily="@font/alfa_slab_one"
+                        android:text="Trailer"
+                        android:textColor="@color/colorAccent"
+                        android:layout_margin="5dp" />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/detaileStreaming"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button_stream_edit"
+                    android:fontFamily="@font/alfa_slab_one"
+                    android:text="Streaming"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/detaileEpisodes"
+                    app:layout_constraintVertical_bias="0.3" />
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+
+</android.support.constraint.ConstraintLayout>

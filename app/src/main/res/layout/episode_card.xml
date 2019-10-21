@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="122dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    tools:layout_editor_absoluteX="10dp"
+    tools:layout_editor_absoluteY="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+        <ImageView
+            android:id="@+id/episodeThumb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:alpha="0.8"
+            android:src="@drawable/detailesplaceholder" />
+
+        <TextView
+            android:id="@+id/episodeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            android:textSize="40sp"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:autoSizeTextType="uniform"
+            />
+    </android.support.v7.widget.CardView>
+
